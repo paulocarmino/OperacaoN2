@@ -1,0 +1,19 @@
+vendor/
+node_modules/
+
+#Add By Paulo
+.idea
+.gitattributes
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+bootstrap/cache/
+storage/
+.env.*.php
+.env.php
+.env
+.env.example
+
