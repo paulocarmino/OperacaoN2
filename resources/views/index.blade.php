@@ -73,7 +73,7 @@
                                                 <?php foreach ($ars as $a): ?>
                                                 <tr>
                                                     <td>
-                                                        <?= $a->numeroars ?>
+                                                        <?= $a->numero_do_ars ?>
                                                     </td>
                                                     <td>
                                                         AUSTRALIAN AGRICULTURAL COMPANY LIMITED.

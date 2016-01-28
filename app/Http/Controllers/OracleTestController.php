@@ -17,7 +17,6 @@ class OracleTestController extends Controller
 
         foreach ($ars as $a) {
             $a->numero_do_ars;
-            dd($a);
         }
 
         return view('index')->withArs($ars);
