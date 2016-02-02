@@ -25,6 +25,6 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/', 'OracleTestController@listaArs');
+    Route::get('/', 'GmudController@listaGmuds');
     Route::get('/api/', 'OracleTestController@listaArs');
 });

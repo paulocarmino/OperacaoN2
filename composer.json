@@ -21,7 +21,8 @@
             "database"
         ],
         "psr-4": {
-            "OperacaoN2\\": "app/"
+            "App\\": "app/",
+            "OperacaoN2\\": "app/OperacaoN2/"
         }
     },
     "autoload-dev": {

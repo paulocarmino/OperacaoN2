@@ -56,39 +56,62 @@
                                                         GMUD
                                                     </th>
                                                     <th>
-                                                        Descrição
+                                                        Inicio
                                                     </th>
                                                     <th>
-                                                        Agente Executor
+                                                        Fim
                                                     </th>
                                                     <th>
-                                                        Status
+                                                        Atividade
                                                     </th>
                                                     <th>
-                                                        Início
+                                                        Agente Solução
+                                                    </th>
+                                                    <th>
+                                                        Analista
+                                                    </th>
+                                                    <th>
+                                                        Aprovação
                                                     </th>
                                                 </tr>
                                                 </thead>
                                                 <tbody>
-                                                <?php foreach ($ars as $a): ?>
+                                                @foreach ($gmuds as $gmud)
+
+                                                    <?php if ($gmud->aprovacao == 'Sem aprovação') {
+                                                    $gmud->aprovacao = '<span class="label label-danger">
+                                                                        Não avaliada
+                                                                        </span>';
+                                                    }else{
+                                                        $gmud->aprovacao = '<span class="label label-success">'.
+                                                                                $gmud->aprovacao
+                                                                            .'</span>';
+                                                    } ?>
+
                                                 <tr>
                                                     <td>
-                                                        <?= $a->numero_do_ars ?>
+                                                        <?= $gmud->gmud ?>
                                                     </td>
                                                     <td>
-                                                        AUSTRALIAN AGRICULTURAL COMPANY LIMITED.
+                                                        <?= $gmud->inicio ?>
                                                     </td>
                                                     <td class="numeric">
-                                                        &nbsp;
+                                                        <?= $gmud->fim ?>
                                                     </td>
                                                     <td class="numeric">
-                                                        -0.01
+                                                        <?= $gmud->atividade ?>
                                                     </td>
                                                     <td class="numeric">
-                                                        -0.36%
+                                                        <?= $gmud->agente_solucao ?>
+                                                    </td>
+                                                    <td class="numeric">
+                                                        <?= $gmud->executor ?>
+                                                    </td>
+                                                    <td class="numeric">
+                                                        <?= $gmud->aprovacao ?>
                                                     </td>
                                                 </tr>
-                                                <?php endforeach ?>
+                                                @endforeach
                                                 </tbody>
                                             </table>
                                         </div>

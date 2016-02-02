@@ -151,10 +151,10 @@ return [
         /*
          * Application Service Providers...
          */
-        OperacaoN2\Providers\AppServiceProvider::class,
-        OperacaoN2\Providers\AuthServiceProvider::class,
-        OperacaoN2\Providers\EventServiceProvider::class,
-        OperacaoN2\Providers\RouteServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
         Yajra\Oci8\Oci8ServiceProvider::class,
 
     ],

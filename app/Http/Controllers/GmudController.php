@@ -1,16 +1,29 @@
 <?php
 
-namespace OperacaoN2\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use OperacaoN2\Http\Requests;
-use OperacaoN2\Http\Controllers\Controller;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use App\OperacaoN2\Repositories\GmudRepository;
 
-class GmudController extends Controller
-{
-    public function listaGmud()
+class GmudController extends Controller{
+
+    private $gmudRepository;
+
+    public function __construct(GmudRepository $gmudRepository)
     {
-        return view('index');
+        $this->gmudRepository = $gmudRepository;
+    }
+
+
+    public function listaGmuds()
+    {
+        $gmuds = $this->gmudRepository->getAllGmudWaitApproval();
+
+
+
+        return view('index', compact('gmuds'));
     }
 }
