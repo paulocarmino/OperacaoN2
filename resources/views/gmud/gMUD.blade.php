@@ -36,9 +36,6 @@
                                 <th data-hide="all">
                                     <strong>Atividade</strong>
                                 </th>
-                                <th data-hide="all">
-                                    <strong>Descrição</strong>
-                                </th>
                                 <th class="text-center">
                                     AGENTE DE SOLUÇÃO
                                 </th>
@@ -70,9 +67,6 @@
                                     </td>
                                     <td>
                                         <?= $gmud->atividade ?>
-                                    </td>
-                                    <td>
-                                        <?= $gmud->descricao_atividade ?>
                                     </td>
                                     <td valign="middle" class="text-center">
                                         <?= $gmud->agente_solucao ?>
