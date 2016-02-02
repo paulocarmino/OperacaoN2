@@ -50,6 +50,7 @@ class GmudRepository {
   TO_CHAR(ARADMIN.CONV_DATA_ARS(C.FIM_PREVISTO), \'DD/MM/YYYY\' || chr(13) || \'HH24:MI\') AS FIM,
   C.TIPO_PLANO,
   C.ATIVIDADE,
+  C.DESCRICAO_ATIVIDADE,
   C.AGENTE_SOLUCAO,
   substr(c.executor,0,instr(c.executor,\' \',1,1) - 1)||substr(c.executor,instr(c.executor,\' \',-1),length(c.executor)) AS executor,
   DECODE(B.RD_APROVADA,

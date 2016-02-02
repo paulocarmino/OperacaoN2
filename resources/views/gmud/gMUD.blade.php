@@ -18,7 +18,7 @@
                     <input type="text" class="form-control input-sm m-b-xs" id="filter"
                            placeholder="Digite algo que queira filtrar na tabela">
 
-                        <table class="footable table table-stripped toggle-arrow-tiny" data-page-size='10000' data-filter=#filter>
+                        <table class="footable table table-stripped toggle-arrow-tiny" data-page-size='10000' data-sort="false" data-filter=#filter>
                             <thead>
                             <tr>
                                 <th class="text-center">
@@ -35,6 +35,9 @@
                                 </th>
                                 <th data-hide="all">
                                     <strong>Atividade</strong>
+                                </th>
+                                <th data-hide="all">
+                                    <strong>Descrição</strong>
                                 </th>
                                 <th class="text-center">
                                     AGENTE DE SOLUÇÃO
@@ -67,6 +70,9 @@
                                     </td>
                                     <td>
                                         <?= $gmud->atividade ?>
+                                    </td>
+                                    <td>
+                                        <?= $gmud->descricao_atividade ?>
                                     </td>
                                     <td valign="middle" class="text-center">
                                         <?= $gmud->agente_solucao ?>

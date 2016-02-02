@@ -10,19 +10,22 @@
 <script src="inspina/js/plugins/metisMenu/jquery.metisMenu.js"></script>
 <script src="inspina/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
+<!-- FooTable -->
+<script src="inspina/js/plugins/footable/footable.all.min.js"></script>
+
 <!-- Custom and plugin javascript -->
 <script src="inspina/js/inspinia.js"></script>
 <script src="inspina/js/plugins/pace/pace.min.js"></script>
-
-<!-- FooTable -->
-<script src="inspina/js/plugins/footable/footable.all.min.js"></script>
 
 <!-- Page-Level Scripts -->
 <script>
     $(document).ready(function() {
 
-        $('.footable').footable();
-        $('.footable2').footable();
+        $('.footable').footable({
+            "paging": {
+                "enabled": false
+            }
+        });
 
     });
 
