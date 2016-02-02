@@ -1,69 +1,53 @@
-<div class="page-header-menu">
-    <div class="container">
-        <!-- BEGIN MEGA MENU -->
-        <!-- DOC: Apply "hor-menu-light" class after the "hor-menu" class below to have a horizontal menu with white background -->
-        <!-- DOC: Remove data-hover="dropdown" and data-close-others="true" attributes below to disable the dropdown opening on mouse hover -->
-        <div class="hor-menu ">
-            <ul class="nav navbar-nav">
-                <li class="active">
-                    <a href="index.html">Inicio</a>
-                </li>
-
-
-                <li class="menu-dropdown classic-menu-dropdown ">
-                    <a data-hover="megamenu-dropdown" data-close-others="true" data-toggle="dropdown" href="javascript:;">
-                        Mudanças/CRQ <i class="fa fa-angle-down"></i>
-                    </a>
-                    <ul class="dropdown-menu pull-left">
-                        <li class=" dropdown">
-                            <a href=":;">
-                                <i class="icon-briefcase"></i>
-                                VAS/WEB/SOA </a>
-                        </li>
-                        <li class=" dropdown">
-                            <a href=":;">
-                                <i class="icon-briefcase"></i>
-                                ID. Digital </a>
-                        </li>
-                        <li class=" dropdown">
-                            <a href=":;">
-                                <i class="icon-briefcase"></i>
-                                Engenharia </a>
-                        </li>
-                        <li class=" dropdown">
-                            <a href=":;">
-                                <i class="icon-briefcase"></i>
-                                Produção </a>
-                        </li>
-                        <li class=" dropdown">
-                            <a href=":;">
-                                <i class="icon-briefcase"></i>
-                                Ferramentas </a>
-                        </li>
-                        <li class=" dropdown">
-                            <a href=":;">
-                                <i class="icon-briefcase"></i>
-                                Backup </a>
-                        </li>
-                        <li class=" dropdown">
-                            <a href=":;">
-                                <i class="icon-briefcase"></i>
-                                Mainframe </a>
-                        </li>
-                        <li class=" dropdown">
-                            <a href=":;">
-                                <i class="icon-briefcase"></i>
-                                Click </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">Teste SMS</a>
-                    </li>
+<div class="navbar-collapse collapse" id="navbar">
+    <ul class="nav navbar-nav">
+        <li class="active">
+            <a aria-expanded="false" role="button" href="layouts.html"> Back to main Layout page</a>
+        </li>
+        <li class="dropdown">
+            <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Menu item <span class="caret"></span></a>
+            <ul role="menu" class="dropdown-menu">
+                <li><a href="">Menu item</a></li>
+                <li><a href="">Menu item</a></li>
+                <li><a href="">Menu item</a></li>
+                <li><a href="">Menu item</a></li>
             </ul>
-        </div>
-        <!-- END MEGA MENU -->
-    </div>
+        </li>
+        <li class="dropdown">
+            <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Menu item <span class="caret"></span></a>
+            <ul role="menu" class="dropdown-menu">
+                <li><a href="">Menu item</a></li>
+                <li><a href="">Menu item</a></li>
+                <li><a href="">Menu item</a></li>
+                <li><a href="">Menu item</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Menu item <span class="caret"></span></a>
+            <ul role="menu" class="dropdown-menu">
+                <li><a href="">Menu item</a></li>
+                <li><a href="">Menu item</a></li>
+                <li><a href="">Menu item</a></li>
+                <li><a href="">Menu item</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a aria-expanded="false" role="button" href="#" class="dropdown-toggle" data-toggle="dropdown"> Menu item <span class="caret"></span></a>
+            <ul role="menu" class="dropdown-menu">
+                <li><a href="">Menu item</a></li>
+                <li><a href="">Menu item</a></li>
+                <li><a href="">Menu item</a></li>
+                <li><a href="">Menu item</a></li>
+            </ul>
+        </li>
+
+    </ul>
+    <ul class="nav navbar-top-links navbar-right">
+        <li>
+            <a href="login.html">
+                <i class="fa fa-sign-out"></i> Log out
+            </a>
+        </li>
+    </ul>
+</div>
+</nav>
 </div>
