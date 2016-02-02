@@ -16,32 +16,34 @@
 
                 <div class="ibox-content">
                     <input type="text" class="form-control input-sm m-b-xs" id="filter"
-                           placeholder="Search in table">
+                           placeholder="Digite algo que queira filtrar na tabela">
 
-                    <div class="table-responsive">
-                        <table class="footable table table-stripped" data-page-size='10000' data-filter=#filter>
+                        <table class="footable table table-stripped toggle-arrow-tiny" data-page-size='10000' data-filter=#filter>
                             <thead>
                             <tr>
-                                <th>
+                                <th class="text-center">
                                     GMUD
                                 </th>
-                                <th>
-                                    Inicio
+                                <th class="text-center">
+                                    INÍCIO
                                 </th>
-                                <th>
-                                    Fim
+                                <th class="text-center">
+                                    FIM
                                 </th>
-                                <th>
-                                    Atividade
+                                <th class="text-center">
+                                    ATIVIDADE
                                 </th>
-                                <th>
-                                    Agente Solução
+                                <th data-hide="all">
+                                    <strong>Atividade</strong>
                                 </th>
-                                <th>
-                                    Analista
+                                <th class="text-center">
+                                    AGENTE DE SOLUÇÃO
                                 </th>
-                                <th>
-                                    Aprovação
+                                <th class="text-center">
+                                    ANALISTA
+                                </th>
+                                <th class="text-center">
+                                    APROVAÇÃO
                                 </th>
                             </tr>
                             </thead>
@@ -51,30 +53,36 @@
                                 @include('gmud.rulesGmud')
 
                                 <tr>
-                                    <td>
+                                    <td class="text-center">
                                         <?= $gmud->gmud ?>
                                     </td>
-                                    <td>
+                                    <td class="text-center">
                                         <?= $gmud->inicio ?>
                                     </td>
-                                    <td class="numeric">
+                                    <td class="text-center">
                                         <?= $gmud->fim ?>
                                     </td>
-                                    <td class="numeric">
+                                    <td>
+                                        <?= substr($gmud->atividade, 0, 35).'...' ?>
+                                    </td>
+                                    <td>
                                         <?= $gmud->atividade ?>
                                     </td>
-                                    <td class="numeric">
+                                    <td valign="middle" class="text-center">
                                         <?= $gmud->agente_solucao ?>
                                     </td>
-                                    <td class="numeric">
+                                    <td class="text-center">
                                         <?= $gmud->executor ?>
                                     </td>
-                                    <td class="numeric">
+                                    <td class="text-center">
                                         <?= $gmud->aprovacao ?>
                                     </td>
                                 </tr>
                             @endforeach
                             </tbody>
                         </table>
-                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

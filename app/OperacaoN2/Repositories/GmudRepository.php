@@ -6,6 +6,33 @@ class GmudRepository {
 
     public function getAllGmudWaitApproval()
     {
+
+        $filasWeb = '\'OP_WEB_N2_GLOBALWEB\',
+                     \'OP_OISMARTCLOUD_N2_GLOBALWEB\',
+                     \'OPERACAO_SIS_PORTAL_OI\',
+        ';
+
+        $filasSva = '\'OP_ACM_N2_GLOBALWEB\',
+                     \'OP_BROADCAST_N2_GLOBALWEB\',
+                     \'OP_FERRAMENTASVA_N2_GLOBALWEB\',
+                     \'OP_MENUOI_N2_GLOBALWEB\',
+                     \'OP_OCS_N2_GLOBALWEB\',
+                     \'OP_OISOMNALINHA_N2_GLOBALWEB\',
+                     \'OP_PORTALVAS_N2_GLOBALWEB\',
+                     \'OP_SMS_N2_GLOBALWEB\',
+                     \'OP_SVA_N2_GLOBALWEB\',
+                     \'OP_VASPROXY_N2_GLOBALWEB\',
+        ';
+
+        $filasSoa = '\'OP_SOA_N2_GLOBALWEB\',
+                     \'OP_ENTIREX_N2_GLOBALWEB\',
+                     \'OP_VITRIA_N2_GLOBALWEB\'
+        ';
+
+        $filasTodas = $filasWeb.$filasSva.$filasSoa;
+
+
+
         $listaGmud = DB::select('SELECT DISTINCT (SUBSTR (B.MUDANCA_ID_FK,  9, 7)  || \'<br>\' || DECODE(A.STATUS,
     3, \'Em Aprov. Ger.\',
     4, \'Aprov.Técn.\',
@@ -33,8 +60,7 @@ class GmudRepository {
   FROM ARADMIN.MUD_MUDANCAS A
       INNER JOIN ARADMIN.MUD_APROVACOESTECNICAS B ON A.MUDANCA_ID = B.MUDANCA_ID_FK
       INNER JOIN ARADMIN.MUD_PLANOTECNICO C ON A.MUDANCA_ID = C.MUDANCA_ID_FK
-  WHERE (  C.AGENTE_SOLUCAO = \'OP_WEB_N2_GLOBALWEB\'
-        OR C.AGENTE_SOLUCAO = \'OP_SOA_N2_GLOBALWEB\')
+  WHERE (  C.AGENTE_SOLUCAO IN ('.$filasTodas.'))
     AND (b.rd_aprovada = 0  OR b.rd_aprovada = 1 OR b.rd_aprovada = 2 OR b.rd_aprovada IS NULL)
   AND C.AGENTE_SOLUCAO = B.AGENTE_SOLUCAO
   AND A.STATUS IN (\'4\',\'5\',\'6\',\'7\',\'8\',\'9\',\'10\')
