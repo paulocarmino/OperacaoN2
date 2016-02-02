@@ -6,10 +6,20 @@
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <h5>Operação WEB/VAS/SOA</h5>
+
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                    </div>
                 </div>
+
                 <div class="ibox-content">
+                    <input type="text" class="form-control input-sm m-b-xs" id="filter"
+                           placeholder="Search in table">
+
                     <div class="table-responsive">
-                        <table class="table table-striped">
+                        <table class="footable table table-stripped" data-page-size='10000' data-filter=#filter>
                             <thead>
                             <tr>
                                 <th>
@@ -38,15 +48,7 @@
                             <tbody>
                             @foreach ($gmuds as $gmud)
 
-                                <?php if ($gmud->aprovacao == 'Sem aprovação') {
-                                    $gmud->aprovacao = '<span class="label label-danger">
-                                                                        Não avaliada
-                                                                        </span>';
-                                }else{
-                                    $gmud->aprovacao = '<span class="label label-success">'.
-                                            $gmud->aprovacao
-                                            .'</span>';
-                                } ?>
+                                @include('gmud.rulesGmud')
 
                                 <tr>
                                     <td>
