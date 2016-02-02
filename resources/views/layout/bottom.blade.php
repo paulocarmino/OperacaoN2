@@ -1,14 +1,8 @@
-</div>
 <div class="footer">
     <div>
         <strong>Copyright</strong> Globalweb / Oi &copy; 2016 | Dúvidas e manutenção: Paulo Carmino (paulo.jardim@globalweb.com.br)
     </div>
 </div>
-
-</div>
-</div>
-
-
 
 <!-- Mainly scripts -->
 <script src="inspina/js/jquery-2.1.1.js"></script>

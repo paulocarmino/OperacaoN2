@@ -12,6 +12,10 @@
     <link href="inspina/css/bootstrap.min.css" rel="stylesheet">
     <link href="inspina/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="inspina/css/animate.css" rel="stylesheet">
+
+    <!-- FooTable -->
+    <link href="inspina/css/plugins/footable/footable.core.css" rel="stylesheet">
+
     <link href="inspina/css/style.css" rel="stylesheet">
 
 </head>
@@ -50,4 +54,6 @@
 
                 <div class="container">
                     @include('layout.menu')
-
+                </div>
+            </nav>
+        </div>

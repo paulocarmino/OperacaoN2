@@ -3,7 +3,7 @@
                                                                         Não avaliada
                                                                         </span>';
 }else{
-    $gmud->aprovacao = '<span class="label label-success">'.
+    $gmud->aprovacao = '<span class="label label-primary">'.
             $gmud->aprovacao
             .'</span>';
 } ?>
