@@ -8,10 +8,10 @@
 
     <title>INSPINIA | Dashboard v.4</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="inspina/css/bootstrap.min.css" rel="stylesheet">
+    <link href="inspina/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="inspina/css/animate.css" rel="stylesheet">
+    <link href="inspina/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -25,7 +25,7 @@
                     <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
                         <i class="fa fa-reorder"></i>
                     </button>
-                    <a href="#" class="navbar-brand">Inspinia</a>
+                    <a href="#" class="navbar-brand">Operação de Sistemas</a>
                 </div>
 
     @include('layout.menu')

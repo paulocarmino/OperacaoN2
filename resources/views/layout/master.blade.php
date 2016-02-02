@@ -5,10 +5,12 @@
 <!-- END HEADER -->
 
 <!-- BEGIN PAGE CONTAINER -->
-<div class="page-container">
+<div class="wrapper wrapper-content">
+    <div class="container">
 
     @yield('content')
 
+    </div>
 </div>
 <!-- END PAGE CONTAINER -->
     @include('layout.bottom')
