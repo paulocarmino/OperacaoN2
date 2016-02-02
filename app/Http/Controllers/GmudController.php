@@ -22,8 +22,6 @@ class GmudController extends Controller{
     {
         $gmuds = $this->gmudRepository->getAllGmudWaitApproval();
 
-
-
-        return view('index', compact('gmuds'));
+        return view('gmud.index', compact('gmuds'));
     }
 }
