@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
 <!-- BEGIN HEAD -->
     @include('layout.header')
 <!-- END HEADER -->
