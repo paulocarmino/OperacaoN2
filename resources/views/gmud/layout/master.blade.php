@@ -1,5 +1,5 @@
 <!-- BEGIN HEAD -->
-    @include('layout.header')
+    @include('gmud.layout.header')
 <!-- END HEADER -->
 
 <!-- BEGIN PAGE CONTAINER -->
@@ -11,5 +11,5 @@
     </div>
 </div>
 <!-- END PAGE CONTAINER -->
-    @include('layout.bottom')
+    @include('gmud.layout.bottom')
 <!-- BEGIN PRE-FOOTER -->

@@ -1,4 +1,4 @@
-@extends('layout.master')
+@extends('gmud.layout.master')
 
 @section('content')
     <div class="row">
@@ -34,10 +34,13 @@
                                     ATIVIDADE
                                 </th>
                                 <th data-hide="all">
-                                    <strong>Atividade</strong>
+                                    Atividade
                                 </th>
                                 <th data-hide="all">
-                                    <strong>Descrição</strong>
+                                    Descrição
+                                </th>
+                                <th data-hide="all">
+                                    Mais informações
                                 </th>
                                 <th class="text-center">
                                     AGENTE DE SOLUÇÃO
@@ -46,16 +49,35 @@
                                     ANALISTA
                                 </th>
                                 <th class="text-center">
-                                    APROVAÇÃO
+                                    STATUS
                                 </th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach ($gmuds as $gmud)
 
-                                @include('gmud.rulesGmud')
 
                                 <tr>
+
+                                    <div class="modal inmodal fade" id="modalPlanoTecnico<?= substr($gmud->gmud, 8, 7) ?>" tabindex="-1" role="dialog"  aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                                    <h4 class="modal-title">Plano Técnico - GMUD <?= substr($gmud->gmud, 8, 7) ?></h4>
+                                                </div>
+                                                <div class="modal-body">
+
+
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-white" data-dismiss="modal">Fechar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <td class="text-center">
                                         <?= $gmud->gmud ?>
                                     </td>
@@ -74,6 +96,9 @@
                                     <td>
                                         <?= $gmud->descricao_atividade ?>
                                     </td>
+                                    <td>
+                                        <a href="#"><button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#modalPlanoTecnico<?= substr($gmud->gmud, 8, 7) ?>"><i class="fa fa-list"></i> Visualizar Plano Técnico</button></a>
+                                    </td>
                                     <td valign="middle" class="text-center">
                                         <?= $gmud->agente_solucao ?>
                                     </td>
@@ -81,14 +106,20 @@
                                         <?= $gmud->executor ?>
                                     </td>
                                     <td class="text-center">
-                                        <?= $gmud->aprovacao ?>
+                                        @include('gmud.rulesStatusGmud')
                                     </td>
+
                                 </tr>
+
                             @endforeach
                             </tbody>
+
                         </table>
                 </div>
             </div>
         </div>
     </div>
+
+
+
 @endsection

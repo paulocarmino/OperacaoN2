@@ -25,6 +25,6 @@
 */
 
 Route::group(['middleware' => ['web']], function () {
-    Route::get('/', 'GmudController@listaGmuds');
-    Route::get('/api/', 'OracleTestController@listaArs');
+    Route::get('/mudancas', 'GmudController@listaGmuds');
+    Route::get('/mudancas/planoTecnico/', 'GmudController@listaPlanoTecnico');
 });
